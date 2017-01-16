@@ -7,6 +7,9 @@
 #
 require 'rubygems'
 require 'sinatra'
+require 'chinese_pinyin'
+require "rdiscount"
+require "json"
 
 configure :production do
   # Configure stuff here you'll want to
@@ -16,12 +19,15 @@ configure :production do
   #       from ENV['DATABASE_URI'] (see /env route below)
 end
 
+set :markdown, :layout_engine => :erb, :layout => :layout
 # Quick test
 get '/' do
-  "Congradulations!
-   You're running a Sinatra application on Heroku!"
+	markdown :heroku_sinatra_app
 end
 
+get '/about' do
+    markdown :about
+end
 # Test at <appname>.heroku.com
 
 # You can see all your app specific information this way.
