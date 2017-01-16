@@ -1,0 +1,154 @@
+body {
+	background-color: #444;
+	padding: 0px;
+	margin: 0px;
+	font-size: 13px;
+	line-height: 150%;
+	color: #444;
+	font-family: "Microsoft Yahei", "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti !important;
+}
+
+h2 {
+	color: #181818;
+}
+
+table {
+	width: 100%;
+	border: 0px;
+	margin: 0px;
+	margin-bottom: 18px;	
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+
+table caption {
+	padding: 10px;
+}
+
+th, tr, td {
+	margin: 0px;
+	padding: 0px;
+}
+
+th, td {
+	border: solid 1px #444;	
+	padding: 6px;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+th {
+	background-color: #666;
+	color: #fff;
+}
+
+
+
+#main {
+	width: 960px;
+	margin: 0px auto;
+	padding: 10px 0px;
+	background-color: #fff;
+}
+
+#sliderbar {
+	position: fixed;
+	top: 0px;
+	height: 100%;
+	width: 236px;
+	background-color: #fff;
+	border-right: solid 4px #666;
+}
+
+#sliderbar-header {
+	padding: 12px 20px;
+	border-bottom: solid 1px #ccc;
+}
+
+#sliderbar-header #filter {
+	width: 196px;
+	height: 24px;
+	font-size:12px;
+	line-height: 18px;	
+}
+
+#sliderbar ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+#sliderbar ul li {
+	list-style: none;
+	border-bottom: solid 1px #ccc;
+}
+
+
+#sliderbar ul li a {
+	color: #444;
+	font-size: 13px;
+	line-height: 24px;
+	padding: 4px 0px;
+	display: block;
+	text-decoration: none;
+	padding-left: 36px;
+	/*text-shadow: 0px -1px 0px #fff;*/
+}
+
+#sliderbar ul li a:hover {
+	color: #000;
+	background-color: #f7f7f7;
+}
+
+#sliderbar ul li a.active {
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+	background-color: #08C;
+}
+
+#sliderbar-footer {
+	position: absolute;
+	border-top: solid 1px #ccc;
+	background-color: #eee;
+	line-height: 24px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	padding: 5px 0px 10px 40px;
+}
+
+.artical {
+	margin-left: 240;
+	padding: 0 36px;
+	background-color: #fff;
+}
+
+code, pre {
+	font-size: 12px;
+	line-height: 21px;
+}
+
+pre {
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+.newh2, .newh3, .newh4, .newh5, .newh6 {
+	font-size: 13px;
+	line-height: 24px;
+}
+
+/*
+	alert notice from blueprint
+==========================================*/
+.error, .alert, .notice, .success, .info {padding:0.8em;margin-bottom:1em;border:2px solid #ddd;}
+.error, .alert {background:#fbe3e4;color:#8a1f11;border-color:#fbc2c4;}
+.notice {background:#fff6bf;color:#514721;border-color:#ffd324;}
+.success {background:#e6efc2;color:#264409;border-color:#c6d880;}
+.info {background:#d5edf8;color:#205791;border-color:#92cae4;}
+.error a, .alert a {color:#8a1f11;}
+.notice a {color:#514721;}
+.success a {color:#264409;}
+.info a {color:#205791;}
+
+
+

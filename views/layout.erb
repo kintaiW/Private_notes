@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>Dayang Document</title>
+		<link rel="stylesheet" type="text/css" href="/css/prettify.css">
+		<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+		<script type="text/javascript" src="/js/jquery.js"></script>
+		<script src="/js/jquery.quicksearch.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="/js/prettify.js"></script>
+		<script src="/js/doc.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body id="layout">
+		<div id="main">
+			<div id="sliderbar">
+				<div id="sliderbar-header">
+					<input type="text" name="filter" value="" id="filter"  placeHolder="Search ..."/>
+				</div>
+				<ul id="articals-list">
+				</ul>
+				<div id="sliderbar-footer">
+					<a href="/about">About this App</a>
+				</div>	
+			</div>
+			<div class="artical"> 
+				<div id="category"></div>
+				<%= yield%>
+			</div>
+		</div>
+	</body>
+</html>
