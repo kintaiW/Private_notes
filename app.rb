@@ -21,7 +21,7 @@ end
 
 set :markdown, :layout_engine => :erb, :layout => :layout
 
-ignoreSet = ['./views/about.md']
+ignoreSet = ['/views/about.md']
 # Quick test
 get '/' do
 	markdown :heroku_sinatra_app
