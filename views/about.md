@@ -4,7 +4,7 @@
 ####Why create this web site?	
 
 这个应用主要用来做笔记。采用markdown语法编写内容，方便排版。	
-该网站部署在Heroku,仓库地址在: <https://github.com/kintaiW/Private_notes>
+该网站部署在Heroku,仓库在: <https://github.com/kintaiW/Private_notes>
 
 作者: cscroll  
 内容提供者: cscroll  
@@ -13,7 +13,7 @@
 ####Technology	
 
 * __markdown语法__: <http://qingbo.net/picky/502-markdown-syntax.html>
-* __代码高亮PrettifyJS__: <http://google-code-prettify.googlecode.com/>
+* __代码高亮PrettifyJS__: <http://google-code-prettify.googlecode.com>
 * __Ruby__: <http://ruby-china.org/wiki>
 * __Sinatrarb__: <http://www.sinatrarb.com/intro-zh.html>
 * __Ruby Gems__:
@@ -35,6 +35,5 @@
 
 ---
 ###About me
-####一个程序员
-* __GitHub__: https://github.com/kintaiW
+####a programmer
 
