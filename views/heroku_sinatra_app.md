@@ -17,4 +17,7 @@
 	* 根据Heroku文档要求,必须指定Sinatra 
 
 
-###3. coming soon 
+###3. 术语约定
+
+
+###4. coming soon 

@@ -6,6 +6,7 @@
 TARGET = test
 
 OBJS = main.o Laser_segmentation.o Utils.o test.o Point_cloud_generation.o
+
 CXX ?= g++
 
 CXXFLAGS += -c -Wall $(shell pkg-config --cflags opencv) -I/usr/include/opencv2/ -Iinclude/
