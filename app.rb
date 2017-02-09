@@ -38,7 +38,7 @@ end
 
 get '/doc.json' do
 	path = File.dirname(__FILE__) + "/views"
-	ignoreSet = ["#{path}/about.md"]
+	ignoreSet = ["#{path}/about.md","#{path}/about_me.md"]
 
 	list = Array.new
   #扫描views/*.md文件,构建文件列表
