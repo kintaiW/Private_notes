@@ -7,7 +7,7 @@
 ####2.1 __源码获取__: [官方网址](https://code.videolan.org/videolan/vlc-android/branches)
 
   * 建议选2.0.x版本的VLC-Android(已亲测)
-  * 根据编译脚本 *compile.sh*,知源码编译步骤包括
+  * 根据编译脚本 *compile.sh*,源码编译步骤如下
     * *gradle*构建,默认下载目录为*$HOME/.gradle/wrapper/dists/...*(...是具体版本,例如2.10\2.14.1)
     * vlc源码,__$__:git clone git://git.videolan.org/vlc.git vlc
     * so编译,文件 *compile-libvlc.sh*
@@ -42,7 +42,7 @@
     </pre></div>
 
 
-####2.3 __快捷方式__: 编译出错
+####2.3 __快捷方式__: 
 
 #####2.3.1 第三方库
   * 你的项目所在位置,以下省略 ${your_project_path} <==> ${u_path}
@@ -56,3 +56,9 @@
 
 #####2.3.2 bootstrap
   * 很多子目录下,bootstrap文件是用来检测环境配置,依赖相关的问题,报错需留意,例如GCC,Autotools系列工具版本不对 
+
+#####2.3.3 底层算法
+  * 如何截取底层传输的YUV数据
+    * 在${u_path}/vlc/src/video_output/video_output.c中 *vout_PutPicture* 函数中作处理, *vout_GetPicture* 是播放后的数据,马上刷新
+  * 如何修改在底层嵌入算法,例如移图
+    * 在${u_path}/vlc/src/Makefile.am中 Building libvlc下加入,再独立添加一个模块,加入 *.c/cpp与 *.h等等

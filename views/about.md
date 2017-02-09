@@ -34,6 +34,6 @@
 
 
 ---
-###[About Me](https:/cscroll.herokuapp.com/doc/about_me)
+###About Me
 ####a programmer
 
