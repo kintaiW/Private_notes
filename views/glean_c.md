@@ -8,7 +8,7 @@
   * 注意编译器,不然还是会引起函数无引用的编译错误
 
   <div class="sourceCode"><pre class="prettyprint">
-    //test_interface.cpp----start
+    //test_interface.cpp
     #ifdef __cplusplus
     extern "C" {
     #endif
@@ -19,13 +19,12 @@
     void test_int(vout_thread_t *vout){
      msg_Dbg(vout,"kk test----20170109");
     }
-    //test_interface.cpp----end
-    //test_interface.h------start
+    
+    //test_interface.h
     #ifndef TEST_INTERFACE_H
     #define TEST_INTERFACE_H
     void test_int(vout_thread_t *vout);
     #endif
-    //test_interface.h-----end
   </pre></div>
 
   * 现在即可在C文件中直接调用 *test_int* 函数
