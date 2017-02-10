@@ -53,6 +53,8 @@
   * opencv函数无定义或无引用
     * 治本的解决方案是修改相关编译脚本 *${u_path}/libvlc/jni/Android.mk* 
     * 如果尝试失败,这里提供治标的方案,在 *compile-libvlc.sh* 文件中注释掉自动写入${u_path}/libvlc/jni/libvlcjni-modules.c与libvlcjni-symbols.c行(行首printf),然后在该两文件中注释掉包含opencv字眼的行
+  * 编译器无效
+    * 一切编译都是为后续的app准备的,需要ARM架构的编译器,NDK目录里面有个python脚本用于生成ARM系列编译工具链,参见 *compile-libvlc.sh* 中包含 *make_standalone_toolchain.py* 字眼行,自行添加环境配置 
 
 #####2.3.2 bootstrap
   * 很多子目录下,bootstrap文件是用来检测环境配置,依赖相关的问题,报错需留意,例如GCC,Autotools系列工具版本不对 
