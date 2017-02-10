@@ -62,12 +62,33 @@
     * 在${u_path}/vlc/src/video_output/video_output.c中 *vout_PutPicture* 函数中作处理, *vout_GetPicture* 是播放后的数据,马上丢掉的
   * 如何在底层嵌入算法,例如移图
     * 在${u_path}/vlc/src/Makefile.am中 Building libvlc下添加一个独立模块, *.c/cpp与 *.h等等
-    * vlc源码架构是用c语言写的,要接入c++算法需要做些[小改动](glean_c),就是extern "C",解决c++编译器[函数重载](glean_c)而引起形参符号问题,参见${u_path}/vlc/modules/access/live555.cpp有一句别有味道的注释
+    * vlc源码架构是用c语言写的,要接入c++算法需要做些小改动,就是extern "C",解决c++编译器[函数重载](glean_c)而引起形参符号问题,参见${u_path}/vlc/modules/access/live555.cpp有一句别有味道的注释
 
     <div class="sourceCode"><pre class="prettyprint">
       extern "C" {
-      #include "../access/mms/asf.h"  /* Who said ugly ? */
+      #include "../access/mms/asf.h"  /\* Who said ugly ? \*/
       }
     </pre></div>
 
-    
+#####2.3.4 延时问题
+  * __文件缓存__: file-caching
+  * __网络缓存__: network-caching
+  * __直播缓存__: live-caching
+  * __输出缓存__: sout-mux-caching
+  * __解码选项__: codec=mediacodec, iomx, all
+    * 项目内全局搜,Java及C层都可以修改,但各个版本vlc生效的地方不一致,故代码处必有备注,例如
+
+    <div class="sourceCode"><pre class="prettyprint">
+      /\*
+       \*Set higher caching values if using iomx decoding, since some omx
+       \*decoders have a very high latency, and if the preroll data isn't
+       \*enough to make the decoder output a frame, the playback timing gets
+       \*started too soon, and every decoded frame appears to be too late.
+       \*On Nexus One, the decoder latency seems to be 25 input packets
+       \*for 320x170 H.264, a few packets less on higher resolutions.
+       \*On Nexus S, the decoder latency seems to be about 7 packets.
+       \*/
+      addOption(":file-caching=1500");
+      addOption(":network-caching=1500");
+    </pre></div>
+

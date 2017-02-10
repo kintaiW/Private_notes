@@ -17,9 +17,8 @@
     }
     #endif
     void test_int(vout_thread_t *vout){
-     msg_Dbg(vout,"kk test----20170109");
+     msg_Dbg(vout,"To do...");
     }
-    
     //test_interface.h
     #ifndef TEST_INTERFACE_H
     #define TEST_INTERFACE_H
