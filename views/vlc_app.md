@@ -59,6 +59,15 @@
 
 #####2.3.3 底层算法
   * 如何截取底层传输的YUV数据
-    * 在${u_path}/vlc/src/video_output/video_output.c中 *vout_PutPicture* 函数中作处理, *vout_GetPicture* 是播放后的数据,马上刷新
-  * 如何修改在底层嵌入算法,例如移图
-    * 在${u_path}/vlc/src/Makefile.am中 Building libvlc下加入,再独立添加一个模块,加入 *.c/cpp与 *.h等等
+    * 在${u_path}/vlc/src/video_output/video_output.c中 *vout_PutPicture* 函数中作处理, *vout_GetPicture* 是播放后的数据,马上丢掉的
+  * 如何在底层嵌入算法,例如移图
+    * 在${u_path}/vlc/src/Makefile.am中 Building libvlc下添加一个独立模块, *.c/cpp与 *.h等等
+    * vlc源码架构是用c语言写的,要接入c++算法需要做些[小改动](glean_c),就是extern "C",解决c++编译器[函数重载](glean_c)而引起形参符号问题,参见${u_path}/vlc/modules/access/live555.cpp有一句别有味道的注释
+
+    <div class="sourceCode"><pre class="prettyprint">
+      extern "C" {
+      #include "../access/mms/asf.h"  /* Who said ugly ? */
+      }
+    </pre></div>
+
+    
