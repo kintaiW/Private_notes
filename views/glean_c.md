@@ -40,3 +40,21 @@
   * __C__: 编译后得到 *test_int* 函数符号  
   * __C++__: 编译后得到 *test_int_int* 函数符号  
 * 因此C++支持函数重载,而C不支持
+
+###2. 结构体
+####2.1 ->与.
+> 在写的代码时,常常有各种a->b->c, a->b.c, a.b->c等等,其实区分很简单
+
+* 假设结构体 *vout* ,有如下两种声明
+
+  <div class="sourceCode"><pre class="prettyprint">
+    struct vout{
+     int age;
+    };
+  </pre></div>
+
+* __sturct vout * v__: 第一种情况,使用 *v->age*
+  * 结构指针->结构成员
+
+* __sturct vout v__: 第二种情况,使用 *v.age*
+  * 结构变量.结构成员

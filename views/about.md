@@ -4,11 +4,11 @@
 ####Why create this web site?	
 
 这个应用主要用来做笔记。采用markdown语法编写内容，方便排版。	
-该网站部署在Heroku,仓库在: <https://github.com/kintaiW/Private_notes>
+该网站部署在Heroku,[仓库](https://github.com/kintaiW/Private_notes)
 
 作者: cscroll  
 内容提供者: cscroll  
-模板源自: __[lvjian700]__:<https://github.com/lvjian700/dydoc>
+模板源自: [lvjian700](https://github.com/lvjian700/dydoc)
 
 ####Technology	
 
