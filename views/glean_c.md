@@ -16,13 +16,13 @@
     #ifdef __cplusplus
     }
     #endif
-    void test_int(vout_thread_t *vout){
+    void test_int(vout_thread_t \*vout){
      msg_Dbg(vout,"To do...");
     }
     //test_interface.h
     #ifndef TEST_INTERFACE_H
     #define TEST_INTERFACE_H
-    void test_int(vout_thread_t *vout);
+    void test_int(vout_thread_t \*vout);
     #endif
   </pre></div>
 
